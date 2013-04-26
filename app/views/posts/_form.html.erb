@@ -1,0 +1,57 @@
+<div class="row">
+
+
+<%= form_for(@post) do |f| %>
+  <% if @post.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@post.errors.count, "error") %> prohibited this post from being saved:</h2>
+
+      <ul>
+      <% @post.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :category %>
+    <%= f.text_field :category %>
+  </div>
+<br />
+
+  <div class="field">
+    <%= f.label :title %>
+    <%= f.text_field :title %>
+  </div>
+
+  <br />
+  <div class="field">
+    <%= f.label :content %>
+    <%= f.text_area :content %>
+  </div>
+ 
+<br />
+Foto 1
+  <div class="field">
+<%= f.file_field :file ,  :class => "nice radius button success small"  %>
+</div>
+  Foto 2
+<div class="field">
+<%= f.file_field :file2 ,  :class => "nice radius button success small"  %>
+</div>
+Foto 3
+<div class="field">
+<%= f.file_field :file3 ,  :class => "nice radius button success small"  %>
+</div>
+
+<br><br>
+
+  <div class="actions">
+    <%= f.submit :class => "nice radius button success small" %>
+  </div>
+<% end %>
+
+
+
+</div>

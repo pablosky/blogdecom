@@ -1,0 +1,55 @@
+<p id="notice"><%= notice %> x</p>
+
+<p>
+  <b>Name:</b>
+  <%= @aporte.name %>
+</p>
+
+<p>
+  <b>Title:</b>
+  <%= @aporte.title %>
+</p>
+
+<p>
+  <b>Content:</b>
+  <%= @aporte.content %>
+</p>
+
+<p>
+  <b>Created at:</b>
+  <%= @aporte.created_at %>
+</p>
+
+<p>
+  <b>Updated at:</b>
+  <%= @aporte.updated_at %>
+</p>
+
+<p>
+  <b>Fecha:</b>
+  <%= @aporte.fecha %>
+</p>
+
+<p>
+  <b>File:</b>
+  <%= @aporte.file %>
+</p>
+
+<p>
+  <b>File2:</b>
+  <%= @aporte.file2 %>
+</p>
+
+<p>
+  <b>File3:</b>
+  <%= @aporte.file3 %>
+</p>
+
+<p>
+  <b>Category:</b>
+  <%= @aporte.category %>
+</p>
+
+
+<%= link_to 'Edit', edit_aporte_path(@aporte) %> |
+<%= link_to 'Back', aportes_path %>

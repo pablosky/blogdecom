@@ -1,0 +1,42 @@
+<h1>Listing aportes</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Title</th>
+    <th>Content</th>
+    <th>Created at</th>
+    <th>Updated at</th>
+    <th>Fecha</th>
+    <th>File</th>
+    <th>File2</th>
+    <th>File3</th>
+    <th>Category</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @aportes.each do |aporte| %>
+  <tr>
+    <td><%= aporte.name %></td>
+    <td><%= aporte.title %></td>
+    <td><%= aporte.content %></td>
+    <td><%= aporte.created_at %></td>
+    <td><%= aporte.updated_at %></td>
+    <td><%= aporte.fecha %></td>
+    <td><%= aporte.file %></td>
+    <td><%= aporte.file2 %></td>
+    <td><%= aporte.file3 %></td>
+    <td><%= aporte.category %></td>
+    <td><%= link_to 'Show', aporte %></td>
+    <td><%= link_to 'Edit', edit_aporte_path(aporte) %></td>
+    <td><%= link_to 'Destroy', aporte, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    <td><%= link_to 'Aprobar', {:controller => "aportes" , :action => "aprobar" , :id=>aporte.id} %></td>
+   
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Aporte', new_aporte_path %>

@@ -1,0 +1,169 @@
+ 
+
+<br><br>
+
+
+
+
+<div class="row collapse"> 
+
+
+<ul class="cf">
+
+<!-- recordar  435*355px-->
+<div class="row six columns">
+<li class="cf">
+<%if @welcomes[0].file? %>
+<%= link_to ( image_tag @welcomes[0].file , :class=>"imgat") ,@welcomes[0] %>
+<%end%>
+<a href= <%=@welcomes[0] %> class="category" title=<%=@welcomes[0].category %> ><%=@welcomes[0].category %></a>
+
+<h3 class="subheader"><%= link_to @welcomes[0].title , @welcomes[0]  %></h3>
+</li >
+</div>
+
+
+
+<div class="row four columns">
+
+<li>
+<%if @welcomes[1].file? %>
+<%= link_to ( image_tag @welcomes[1].file , :class=>"imga2") ,@welcomes[1] %>
+<%end%>
+<a href= <%=@welcomes[1] %> class="category" title=<%=@welcomes[1].category %> ><%=@welcomes[1].category %></a>
+<h5 class="subheader"><%= link_to @welcomes[1].title , @welcomes[1]  %></h5>
+
+</li>
+
+
+<li class="cf">
+<%if @welcomes[2].file? %>
+<%= link_to ( image_tag @welcomes[2].file , :class=>"imga2") , @welcomes[2] %>
+<%end%>
+<a href= <%=@welcomes[2] %> class="category" title=<%=@welcomes[2].category %> ><%=@welcomes[2].category %></a>
+<h5 class="subheader"><%= link_to @welcomes[2].title , @welcomes[2]  %></h5>
+</li>
+
+
+</div>
+
+<div class="row two columns">
+<ul class="side-nav navderecho ">
+  
+ 
+
+   <li><h4><%= link_to 'Aporte', new_aporte_path %></h4></li>
+
+  <li><h4><a href="#">	Tendencias</a></h4></li>
+  <li class="divider"></li>
+  
+  <li><h4><a href="#">  Noticias      </a></h4></li>
+
+   <li class="divider"></li>
+  
+  <li><h4><a href="#">  Tutoriales      </a></h4></li>
+   <li class="divider"></li>
+  
+  <li><h4><a href="#">  Humor     </a></h4></li>
+   <li class="divider"></li>
+  
+  <li><h4><a href="#">  Innovación y Emprendimiento      </a></h4></li>
+  
+  <li class="divider"></li>
+  
+  <li><h4><a href="#">  Trabajos y Prácticas      </a></h4></li>
+
+  <li class="divider"></li>
+  
+
+  <li><h4><a href="#">Contacto</a></h44></li>
+   <li class="divider"></li>
+
+  <li><h4><a href="#">  Encuestas     </a></h4></li>
+
+
+</ul>
+</div>
+
+
+</div> <!-- fin del row de arriba -->
+
+
+
+
+
+
+<br><br>
+
+
+<div class="row collapse">
+
+<div class="row six columns">
+
+<%if @welcomes[3].file? %>
+<%= link_to ( image_tag @welcomes[3].file , :class=>"imga3") ,@welcomes[3] %>
+<%end%>
+<a href= <%=@welcomes[3] %> class="category" title=<%=@welcomes[3].category %> ><%=@welcomes[3].category %></a>
+</div>
+<div class="row six columns">
+<h5 class="subheader"><%= link_to @welcomes[3].title , @welcomes[3]  %></h5> 
+
+<%=  @welcomes[3].content[0,250]   %>...
+
+</div>
+
+
+</div>
+
+<br><br>
+
+
+<div class="row collapse">
+
+<div class="row six columns">
+
+<%if @welcomes[4].file? %>
+<%= link_to ( image_tag @welcomes[4].file , :class=>"imga3") ,@welcomes[4] %>
+<%end%>
+<a href= <%=@welcomes[4] %> class="category" title=<%=@welcomes[4].category %> ><%=@welcomes[4].category %></a>
+</div>
+<div class="row six columns">
+<h5 class="subheader"><%= link_to @welcomes[4].title , @welcomes[4]  %></h5> 
+
+<%=  @welcomes[4].content[0,250]   %>...
+
+</div>
+
+
+</div>
+
+<br><br>
+<div class="row collapse">
+
+<div class="row six columns">
+
+<%if @welcomes[5].file? %>
+<%= link_to ( image_tag @welcomes[5].file , :class=>"imga3") ,@welcomes[5] %>
+<%end%>
+<a href= <%=@welcomes[5] %> class="category" title=<%=@welcomes[5].category %> ><%=@welcomes[5].category %></a>
+</div>
+<div class="row six columns">
+<h5 class="subheader"><%= link_to @welcomes[5].title , @welcomes[5]  %></h5> 
+
+<%=  @welcomes[5].content[0,250]   %>...
+
+</div>
+
+
+</div>
+
+
+
+
+
+
+<br><br>
+<center><a href="#" class="large button">Posts antiguos</a></center>
+
+
+<br><br><br><br>

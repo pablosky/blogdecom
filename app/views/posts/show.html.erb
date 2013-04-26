@@ -1,0 +1,46 @@
+<p id="notice"><%= notice %></p>
+
+
+
+
+<center><h2>  <%= @post.title %> </h2></center>
+
+<div class="row">
+
+<h6 class="subheader" align="right"><%= @post.created_at %></h6>
+<%= image_tag(@post.file_url) if @post.file? %>
+
+<%= image_tag(@post.file2_url) if @post.file2? %>
+
+<%= image_tag(@post.file3_url) if @post.file3? %>
+
+<br>
+<br>
+<br>
+<br>
+
+<div class="row eight columns centered">
+ <h6 class="subheader"><b> <%= @post.content %></b></h6>
+</div>
+
+
+<%= link_to 'Edit', edit_post_path(@post) %> |
+<%= link_to 'Back', posts_path %>
+
+
+
+<div class="fb-comments" data-href=<%= 'http://blogdecom.herokuapp.com/'+post_path(@post) %> data-num-posts="2" data-width="470"></div>
+
+<div id="fb-root"></div>
+
+</div>
+
+
+
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/es_LA/all.js#xfbml=1&appId=357148031041152";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
